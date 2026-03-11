@@ -10,6 +10,7 @@ function WebsiteLayout() {
                     <div>
                         <a href="Aboutme">About me</a>
                         <a href="My work">My work</a>
+                        <a href="Contact">Contact</a>
                     </div>
                 </div>
             </nav>
