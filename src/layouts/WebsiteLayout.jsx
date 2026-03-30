@@ -4,6 +4,11 @@ import Button from "../components/Button";
 
 function WebsiteLayout() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [language, setLanguage] = useState("EN");
+
+    const toggleLanguage = () => {
+        setLanguage((prev) => (prev === "EN" ? "NL" : "EN"));
+    };
 
     return (
         <>
@@ -21,18 +26,22 @@ function WebsiteLayout() {
                         {/* Desktop nav */}
                         <div className="hidden md:flex items-center gap-4">
                             <Link to="/">
-                                <Button>Home</Button>
+                                <Button>{language === "EN" ? "Home" : "Home"}</Button>
                             </Link>
 
                             <Link to="/aboutme">
-                                <Button>About me</Button>
+                                <Button>{language === "EN" ? "About me" : "Over mij"}</Button>
                             </Link>
 
                             <Link to="/mywork">
-                                <Button>My work</Button>
+                                <Button>{language === "EN" ? "My work" : "Mijn werk"}</Button>
                             </Link>
 
-                            <Button>Contact</Button>
+                            <Button>{language === "EN" ? "Contact" : "Contact"}</Button>
+
+                            <Button onClick={toggleLanguage}>
+                                {language}
+                            </Button>
                         </div>
 
                         {/* Mobile menu button */}
@@ -41,7 +50,9 @@ function WebsiteLayout() {
                             onClick={() => setMenuOpen(!menuOpen)}
                             className="md:hidden px-4 py-2 rounded-xl bg-primary text-primary-content border border-white/10"
                         >
-                            {menuOpen ? "Close" : "Menu"}
+                            {menuOpen
+                                ? (language === "EN" ? "Close" : "Sluiten")
+                                : (language === "EN" ? "Menu" : "Menu")}
                         </button>
                     </div>
 
@@ -50,19 +61,35 @@ function WebsiteLayout() {
                         <div
                             className="md:hidden mt-4 flex flex-col gap-3 bg-white/5 border border-white/10 rounded-2xl p-4">
                             <Link to="/" onClick={() => setMenuOpen(false)}>
-                                <Button className="w-full">Home</Button>
+                                <Button className="w-full">
+                                    {language === "EN" ? "Home" : "Home"}
+                                </Button>
                             </Link>
 
                             <Link to="/aboutme" onClick={() => setMenuOpen(false)}>
-                                <Button className="w-full">About me</Button>
+                                <Button className="w-full">
+                                    {language === "EN" ? "About me" : "Over mij"}
+                                </Button>
                             </Link>
 
                             <Link to="/mywork" onClick={() => setMenuOpen(false)}>
-                                <Button className="w-full">My work</Button>
+                                <Button className="w-full">
+                                    {language === "EN" ? "My work" : "Mijn werk"}
+                                </Button>
                             </Link>
 
                             <Button className="w-full" onClick={() => setMenuOpen(false)}>
-                                Contact
+                                {language === "EN" ? "Contact" : "Contact"}
+                            </Button>
+
+                            <Button
+                                className="w-full"
+                                onClick={() => {
+                                    toggleLanguage();
+                                    setMenuOpen(false);
+                                }}
+                            >
+                                {language}
                             </Button>
                         </div>
                     )}
@@ -70,7 +97,7 @@ function WebsiteLayout() {
             </nav>
 
             <main className="my-0!">
-                <Outlet/>
+                <Outlet context={{language}}/>
             </main>
 
             <footer className="bg-secondary px-3 py-3">

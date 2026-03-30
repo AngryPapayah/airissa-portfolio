@@ -1,4 +1,8 @@
+import {useOutletContext} from "react-router-dom";
+
 function AboutMe() {
+    const {language} = useOutletContext();
+
     const codingSkills = [
         {name: "PhpStorm", image: "/skillset/phpstorm.png"},
         {name: "Visual Studio", image: "/skillset/VS.png"},
@@ -19,24 +23,19 @@ function AboutMe() {
 
     return (
         <section className="max-w-6xl mx-auto px-6 py-16 space-y-20">
-
             <div className="grid md:grid-cols-2 gap-10 items-center">
-
                 <div className="space-y-6">
-                    <h1 className="text-5xl font-bold">About Me</h1>
+                    <h1 className="text-5xl font-bold">
+                        {language === "EN" ? "About Me" : "Over mij"}
+                    </h1>
 
                     <p className="text-white/70 leading-relaxed">
-                        I am a Creative Media and Game Technologies (CMGT) student who enjoys
-                        combining creativity and technology to build modern and interactive
-                        applications. I also graduated as a Media Design student from the
-                        Grafisch Lyceum Rotterdam, where I specialized in animation. This
-                        background allows me to approach projects with both a creative and
-                        technical mindset, enabling me to design and develop engaging digital
-                        experiences.
+                        {language === "EN"
+                            ? "I am a Creative Media and Game Technologies (CMGT) student who enjoys combining creativity and technology to build modern and interactive applications. I also graduated as a Media Design student from the Grafisch Lyceum Rotterdam, where I specialized in animation. This background allows me to approach projects with both a creative and technical mindset, enabling me to design and develop engaging digital experiences."
+                            : "Ik ben een Creative Media and Game Technologies (CMGT) student die graag creativiteit en technologie combineert om moderne en interactieve applicaties te bouwen. Ook ben ik afgestudeerd als Media Design student aan het Grafisch Lyceum Rotterdam, waar ik me specialiseerde in animatie. Door deze achtergrond kan ik projecten benaderen met zowel een creatieve als technische mindset, waardoor ik boeiende digitale ervaringen kan ontwerpen en ontwikkelen."}
                     </p>
 
                     <div className="flex gap-4 pt-2">
-
                         <a
                             href="https://github.com/AngryPapayah"
                             target="_blank"
@@ -70,7 +69,6 @@ function AboutMe() {
                         >
                             LinkedIn
                         </a>
-
                     </div>
                 </div>
 
@@ -84,7 +82,9 @@ function AboutMe() {
             </div>
 
             <div className="space-y-8">
-                <h2 className="text-3xl font-semibold">Coding Skills</h2>
+                <h2 className="text-3xl font-semibold">
+                    {language === "EN" ? "Coding Skills" : "Coding vaardigheden"}
+                </h2>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {codingSkills.map((skill) => (
@@ -104,7 +104,9 @@ function AboutMe() {
             </div>
 
             <div className="space-y-8">
-                <h2 className="text-3xl font-semibold">Adobe Skills</h2>
+                <h2 className="text-3xl font-semibold">
+                    {language === "EN" ? "Adobe Skills" : "Adobe vaardigheden"}
+                </h2>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {adobeSkills.map((skill) => (
@@ -122,7 +124,6 @@ function AboutMe() {
                     ))}
                 </div>
             </div>
-
         </section>
     );
 }

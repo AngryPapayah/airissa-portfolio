@@ -1,13 +1,19 @@
-import {Link} from "react-router-dom";
+import {Link, useOutletContext} from "react-router-dom";
 import projects from "../data/projects.json";
 import Button from "../components/Button";
 
 function MyWork() {
+    const {language} = useOutletContext();
+
     return (
         <section className="max-w-6xl mx-auto px-6 py-16">
             <div className="mb-12">
-                <p className="text-accent text-lg">My Work</p>
-                <h1 className="text-5xl font-bold">Projects</h1>
+                <p className="text-accent text-lg">
+                    {language === "EN" ? "My Work" : "Mijn werk"}
+                </p>
+                <h1 className="text-5xl font-bold">
+                    {language === "EN" ? "Projects" : "Projecten"}
+                </h1>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -30,11 +36,13 @@ function MyWork() {
                             </h2>
 
                             <p className="text-white/70 text-sm leading-relaxed">
-                                {project.description}
+                                {project.description[language]}
                             </p>
 
                             <Link to={`/mywork/${project.id}`}>
-                                <Button>View more</Button>
+                                <Button>
+                                    {language === "EN" ? "View more" : "Bekijk meer"}
+                                </Button>
                             </Link>
                         </div>
                     </div>

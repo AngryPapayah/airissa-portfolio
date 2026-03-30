@@ -2,8 +2,14 @@
   {
     "id": 1,
     "title": "Moody",
-    "description": "An AI-based student wellbeing concept created during an international BIP exchange in Finland.",
-    "longDescription": "Moody was created during a BIP exchange in Finland, where second-year CMGT students collaborated in international teams. I worked together with a Dutch, Finnish, and Spanish teammate. Our team was assigned the SDG 'Good Health & Well-being'. We designed Moody, an AI concept that could help LUT students build routines and offer support when they feel stuck. I contributed to the design process and helped build the front-end of the application.",
+    "description": {
+      "EN": "An AI-based student wellbeing concept created during an international BIP exchange in Finland.",
+      "NL": "Een AI-gebaseerd concept voor studentenwelzijn, ontwikkeld tijdens een internationale BIP-uitwisseling in Finland."
+    },
+    "longDescription": {
+      "EN": "Moody was created during a BIP exchange in Finland, where second-year CMGT students collaborated in international teams. I worked together with a Dutch, Finnish, and Spanish teammate. Our team was assigned the SDG 'Good Health & Well-being'. We designed Moody, an AI concept that could help LUT students build routines and offer support when they feel stuck. I contributed to the design process and helped build the front-end of the application.",
+      "NL": "Moody is ontwikkeld tijdens een BIP-uitwisseling in Finland, waar tweedejaars CMGT-studenten samenwerkten in internationale teams. Ik werkte samen met een Nederlandse, Finse en Spaanse teamgenoot. Ons team kreeg de SDG 'Good Health & Well-being'. We ontwierpen Moody, een AI-concept dat LUT-studenten kan helpen routines op te bouwen en ondersteuning te bieden wanneer ze vastlopen. Ik droeg bij aan het ontwerpproces en hielp met het bouwen van de front-end van de applicatie."
+    },
     "images": [
       "/moody/moody-home.png",
       "/moody/moody-chat.png",
@@ -20,8 +26,14 @@
   {
     "id": 2,
     "title": "Poppy",
-    "description": "A music application designed to help people discover songs outside of their usual bubble.",
-    "longDescription": "Poppy was a school project where we worked in separate front-end and back-end teams to build a music application that helps users step outside their musical bubble. I was part of the front-end team. I designed the logo and created the high-fidelity wireframes, so the team had a clear visual direction for the colors, buttons, and overall look of the application. I also helped build the front-end and supported the design process. I wanted the app to feel different from Spotify, so I introduced a Tinder-style swipe feature. In addition, I created the admin page, built components, and presented Poppy to the company Redkiwi.",
+    "description": {
+      "EN": "A music application designed to help people discover songs outside of their usual bubble.",
+      "NL": "Een muziekapplicatie die is ontworpen om mensen te helpen nummers buiten hun gebruikelijke bubbel te ontdekken."
+    },
+    "longDescription": {
+      "EN": "Poppy was a school project where we worked in separate front-end and back-end teams to build a music application that helps users step outside their musical bubble. I was part of the front-end team. I designed the logo and created the high-fidelity wireframes, so the team had a clear visual direction for the colors, buttons, and overall look of the application. I also helped build the front-end and supported the design process. I wanted the app to feel different from Spotify, so I introduced a Tinder-style swipe feature. In addition, I created the admin page, built components, and presented Poppy to the company Redkiwi.",
+      "NL": "Poppy was een schoolproject waarbij we in aparte front-end- en back-endteams werkten aan een muziekapplicatie die gebruikers helpt buiten hun muzikale bubbel te stappen. Ik maakte deel uit van het front-endteam. Ik ontwierp het logo en maakte de high-fidelity wireframes, zodat het team een duidelijke visuele richting had voor de kleuren, knoppen en de algehele uitstraling van de applicatie. Ik hielp ook met het bouwen van de front-end en ondersteunde het ontwerpproces. Ik wilde dat de app anders zou aanvoelen dan Spotify, daarom introduceerde ik een Tinder-achtige swipefunctie. Daarnaast maakte ik de adminpagina, bouwde ik componenten en presenteerde ik Poppy aan het bedrijf Redkiwi."
+    },
     "images": [
       "/poppy/poppy-homepage.png",
       "/poppy/poppy-login.png",

@@ -1,7 +1,9 @@
 import Button from "../components/Button.jsx";
-import {Link} from "react-router-dom";
+import {Link, useOutletContext} from "react-router-dom";
 
 function Home() {
+    const {language} = useOutletContext();
+
     const skills = [
         {name: "React", image: "/skillset/react.webp"},
         {name: "JavaScript", image: "/skillset/JS.png"},
@@ -26,26 +28,30 @@ function Home() {
                     </p>
 
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight">
-                        Fullstack <br/>
-                        <span className="text-accent">Developer</span>
+                        {language === "EN" ? "Fullstack" : "Fullstack"} <br/>
+                        <span className="text-accent">
+                            {language === "EN" ? "Developer" : "Developer"}
+                        </span>
                         <span className="block text-lg md:text-xl text-white/60 mt-2">
-        Junior Level
-    </span>
+                            {language === "EN" ? "Junior Level" : "Junior niveau"}
+                        </span>
                     </h1>
 
                     <p className="max-w-md mx-auto md:mx-0 text-white/70 leading-relaxed text-base md:text-lg">
-                        I am a Creative Media and Game Technologies (CMGT) student
-                        who enjoys combining creativity and technology to build
-                        modern and interactive applications.
+                        {language === "EN"
+                            ? "I am a Creative Media and Game Technologies (CMGT) student who enjoys combining creativity and technology to build modern and interactive applications."
+                            : "Ik ben een Creative Media and Game Technologies (CMGT) student die het leuk vindt om creativiteit en technologie te combineren om moderne en interactieve applicaties te bouwen."}
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center md:justify-start">
                         <Link to="/mywork">
-                            <Button variant="outline">View my projects</Button>
+                            <Button variant="outline">
+                                {language === "EN" ? "View my projects" : "Bekijk mijn projecten"}
+                            </Button>
                         </Link>
 
                         <Button>
-                            Contact me
+                            {language === "EN" ? "Contact me" : "Neem contact op"}
                         </Button>
                     </div>
                 </div>
@@ -63,8 +69,12 @@ function Home() {
 
             <section className="max-w-6xl mx-auto px-6 py-12 md:py-16 space-y-10">
                 <div className="text-center md:text-left">
-                    <p className="text-accent text-lg">Skills</p>
-                    <h2 className="text-3xl md:text-4xl font-bold">My Skillset</h2>
+                    <p className="text-accent text-lg">
+                        {language === "EN" ? "Skills" : "Vaardigheden"}
+                    </p>
+                    <h2 className="text-3xl md:text-4xl font-bold">
+                        {language === "EN" ? "My Skillset" : "Mijn skillset"}
+                    </h2>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">

@@ -1,20 +1,23 @@
 import {useState} from "react";
-import {useParams, Link} from "react-router-dom";
+import {useParams, Link, useOutletContext} from "react-router-dom";
 import projects from "../data/projects.json";
 import Button from "../components/Button";
 
 function ProjectDetail() {
     const {id} = useParams();
+    const {language} = useOutletContext();
     const project = projects.find((p) => p.id === Number(id));
     const [selectedImage, setSelectedImage] = useState(null);
 
     if (!project) {
         return (
             <section className="max-w-5xl mx-auto px-6 py-16">
-                <h1 className="text-4xl font-bold">Project not found</h1>
+                <h1 className="text-4xl font-bold">
+                    {language === "EN" ? "Project not found" : "Project niet gevonden"}
+                </h1>
 
                 <Link to="/mywork" className="text-accent mt-6 inline-block">
-                    ← Back to My Work
+                    ← {language === "EN" ? "Back to My Work" : "Terug naar Mijn Werk"}
                 </Link>
             </section>
         );
@@ -27,7 +30,7 @@ function ProjectDetail() {
                     to="/mywork"
                     className="text-accent hover:opacity-80 transition"
                 >
-                    ← Back
+                    ← {language === "EN" ? "Back" : "Terug"}
                 </Link>
 
                 <h1 className="text-4xl font-bold mt-4">
@@ -35,7 +38,7 @@ function ProjectDetail() {
                 </h1>
 
                 <p className="mt-6 text-white/70 leading-relaxed max-w-3xl">
-                    {project.longDescription}
+                    {project.longDescription[language]}
                 </p>
 
                 <div className="mt-6 flex gap-3">
@@ -45,7 +48,9 @@ function ProjectDetail() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            <Button>Live</Button>
+                            <Button>
+                                {language === "EN" ? "Live" : "Live"}
+                            </Button>
                         </a>
                     )}
 
@@ -63,7 +68,7 @@ function ProjectDetail() {
                 {project.technologies && (
                     <div className="mt-8">
                         <h2 className="text-2xl font-semibold mb-4">
-                            Technologies
+                            {language === "EN" ? "Technologies" : "Technologieën"}
                         </h2>
 
                         <div className="flex flex-wrap gap-3">
@@ -90,7 +95,7 @@ function ProjectDetail() {
                 {project.images && (
                     <div className="mt-16">
                         <h2 className="text-2xl font-semibold mb-6">
-                            Screenshots
+                            {language === "EN" ? "Screenshots" : "Screenshots"}
                         </h2>
 
                         <div
