@@ -2,6 +2,9 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import WebsiteLayout from "./layouts/WebsiteLayout.jsx";
 import ErrorElement from "./pages/ErrorElement.jsx";
 import Home from "./pages/Home.jsx";
+import MyWork from "./pages/MyWork.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
+import AboutMe from "./pages/AboutMe.jsx";
 
 const router = createBrowserRouter([
     {
@@ -10,17 +13,21 @@ const router = createBrowserRouter([
         errorElement: <ErrorElement/>,
         children: [
             {
-                path: "/",
+                index: true,
                 element: <Home/>
             },
-            // {
-            //     path: "/aboutMe",
-            //     element: <AboutMe/>
-            // },
-            // {
-            //     path: "/myWork",
-            //     element: <MyWork/>
-            // },
+            {
+                path: "mywork",
+                element: <MyWork/>
+            },
+            {
+                path: "mywork/:id",
+                element: <ProjectDetail/>
+            },
+            {
+                path: "aboutme",
+                element: <AboutMe/>
+            }
         ]
     }
 ]);

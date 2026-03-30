@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Moody",
+    "description": "An AI-based student wellbeing concept created during an international BIP exchange in Finland.",
+    "longDescription": "Moody was created during a BIP exchange in Finland, where second-year CMGT students collaborated in international teams. I worked together with a Dutch, Finnish, and Spanish teammate. Our team was assigned the SDG 'Good Health & Well-being'. We designed Moody, an AI concept that could help LUT students build routines and offer support when they feel stuck. I contributed to the design process and helped build the front-end of the application.",
+    "images": [
+      "/moody/moody-home.png",
+      "/moody/moody-chat.png",
+      "/moody/moody-logs.png"
+    ],
+    "technologies": [
+      "PhpStorm",
+      "React",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "",
+    "githubUrl": "https://github.com/SukunaRaven/moody"
+  },
+  {
+    "id": 2,
+    "title": "Poppy",
+    "description": "A music application designed to help people discover songs outside of their usual bubble.",
+    "longDescription": "Poppy was a school project where we worked in separate front-end and back-end teams to build a music application that helps users step outside their musical bubble. I was part of the front-end team. I designed the logo and created the high-fidelity wireframes, so the team had a clear visual direction for the colors, buttons, and overall look of the application. I also helped build the front-end and supported the design process. I wanted the app to feel different from Spotify, so I introduced a Tinder-style swipe feature. In addition, I created the admin page, built components, and presented Poppy to the company Redkiwi.",
+    "images": [
+      "/poppy/poppy-homepage.png",
+      "/poppy/poppy-login.png",
+      "/poppy/poppy-register.png",
+      "/poppy/poppy-onboarding.png",
+      "/poppy/poppy-admin-homepage.png",
+      "/poppy/poppy-admin-insights.png",
+      "/poppy/poppy-admin-switch.png",
+      "/poppy/poppy-highfidelity-wireframe.png",
+      "/poppy/poppy-website.png",
+      "/poppy/poppy-logo.png"
+    ],
+    "technologies": [
+      "PhpStorm",
+      "React",
+      "Tailwind CSS",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "liveUrl": "",
+    "githubUrl": "https://github.com/semvde/Poppy-Front_end"
+  }
+]

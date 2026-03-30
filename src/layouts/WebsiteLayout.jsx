@@ -1,26 +1,80 @@
-import {Outlet} from "react-router-dom";
-
+import {Outlet, Link} from "react-router-dom";
+import {useState} from "react";
+import Button from "../components/Button";
 
 function WebsiteLayout() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <>
-            <nav className={"bg-secondary px-3 py-2.5"}>
-                <div className={"flex items-center justify-between max-w-300 mx-auto"}>
-                    <img src="/full-logo.png" alt="logo" className={"h-10"}/>
-                    <div>
-                        <a href="Aboutme">About me</a>
-                        <a href="My work">My work</a>
-                        <a href="Contact">Contact</a>
+            <nav className="bg-secondary px-4 py-4">
+                <div className="max-w-6xl mx-auto">
+                    <div className="flex items-center justify-between">
+                        <Link to="/" onClick={() => setMenuOpen(false)}>
+                            <img
+                                src="/full-logo.png"
+                                alt="logo"
+                                className="h-8 sm:h-10 cursor-pointer hover:scale-105 transition"
+                            />
+                        </Link>
+
+                        {/* Desktop nav */}
+                        <div className="hidden md:flex items-center gap-4">
+                            <Link to="/">
+                                <Button>Home</Button>
+                            </Link>
+
+                            <Link to="/aboutme">
+                                <Button>About me</Button>
+                            </Link>
+
+                            <Link to="/mywork">
+                                <Button>My work</Button>
+                            </Link>
+
+                            <Button>Contact</Button>
+                        </div>
+
+                        {/* Mobile menu button */}
+                        <button
+                            type="button"
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className="md:hidden px-4 py-2 rounded-xl bg-primary text-primary-content border border-white/10"
+                        >
+                            {menuOpen ? "Close" : "Menu"}
+                        </button>
                     </div>
+
+                    {/* Mobile dropdown */}
+                    {menuOpen && (
+                        <div
+                            className="md:hidden mt-4 flex flex-col gap-3 bg-white/5 border border-white/10 rounded-2xl p-4">
+                            <Link to="/" onClick={() => setMenuOpen(false)}>
+                                <Button className="w-full">Home</Button>
+                            </Link>
+
+                            <Link to="/aboutme" onClick={() => setMenuOpen(false)}>
+                                <Button className="w-full">About me</Button>
+                            </Link>
+
+                            <Link to="/mywork" onClick={() => setMenuOpen(false)}>
+                                <Button className="w-full">My work</Button>
+                            </Link>
+
+                            <Button className="w-full" onClick={() => setMenuOpen(false)}>
+                                Contact
+                            </Button>
+                        </div>
+                    )}
                 </div>
             </nav>
 
-            <main className={"my-0!"}>
+            <main className="my-0!">
                 <Outlet/>
             </main>
 
-            <footer className={"bg-secondary px-3 py-3"}>
-                <div className={"text-sm text-center"}>
+            <footer className="bg-secondary px-3 py-3">
+                <div className="text-sm text-center">
                     © Copyright {new Date().getFullYear()} Airissa
                 </div>
             </footer>
