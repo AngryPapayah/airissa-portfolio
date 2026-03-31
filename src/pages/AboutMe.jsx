@@ -32,7 +32,7 @@ function AboutMe() {
                     <p className="text-white/70 leading-relaxed">
                         {language === "EN"
                             ? "I am a Creative Media and Game Technologies (CMGT) student who enjoys combining creativity and technology to build modern and interactive applications. I also graduated as a Media Design student from the Grafisch Lyceum Rotterdam, where I specialized in animation. This background allows me to approach projects with both a creative and technical mindset, enabling me to design and develop engaging digital experiences."
-                            : "Ik ben een Creative Media and Game Technologies (CMGT) student die graag creativiteit en technologie combineert om moderne en interactieve applicaties te bouwen. Ook ben ik afgestudeerd als Media Design student aan het Grafisch Lyceum Rotterdam, waar ik me specialiseerde in animatie. Door deze achtergrond kan ik projecten benaderen met zowel een creatieve als technische mindset, waardoor ik boeiende digitale ervaringen kan ontwerpen en ontwikkelen."}
+                            : "Ik ben een Creative Media and Game Technologies (CMGT) student die graag creativiteit en technologie combineert om moderne en interactieve applicaties te bouwen. Ook ben ik afgestudeerd als Media Design student aan het Grafisch Lyceum Rotterdam, waar ik me specialiseerde in animatie. Door deze achtergrond kan ik projecten benaderen met zowel een creatieve als technische mindset, waardoor ik op creatieve ideeën kom."}
                     </p>
 
                     <div className="flex gap-4 pt-2">
