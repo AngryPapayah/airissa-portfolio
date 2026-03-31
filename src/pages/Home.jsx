@@ -50,9 +50,10 @@ function Home() {
                             </Button>
                         </Link>
 
-                        <Button>
-                            {language === "EN" ? "Contact me" : "Neem contact op"}
-                        </Button>
+                        <Link to="/contact">
+                            <Button>{language === "EN" ? "Contact" : "Contact"}</Button>
+                        </Link>
+                        
                     </div>
                 </div>
 
