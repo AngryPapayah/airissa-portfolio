@@ -25,16 +25,6 @@ function Contact() {
                     : "Connect met mij en volg mijn professionele ontwikkeling.",
             accent: "from-accent/30 to-accent/10"
         },
-        {
-            name: language === "EN" ? "Email" : "E-mail",
-            url: "mailto:airissavermo@hotmail.com",
-            icon: <FaEnvelope className="text-2xl"/>,
-            description:
-                language === "EN"
-                    ? "Send me a message directly via email."
-                    : "Stuur mij direct een bericht via e-mail.",
-            accent: "from-white/10 to-white/5"
-        }
     ];
 
     const text = {
@@ -58,7 +48,7 @@ function Contact() {
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto justify-center">
                 {contactLinks.map((link) => (
                     <a
                         key={link.name}
