@@ -9,7 +9,7 @@ function AboutMe() {
         {name: "JavaScript", image: "/skillset/JS.png"},
         {name: "React", image: "/skillset/react.webp"},
         {name: "React Native", image: "/skillset/react.webp"},
-        {name: "Express", image: "/skillset/JS.png"},
+        // {name: "Express", image: "/skillset/JS.png"},
         {name: "HTML & CSS", image: "/skillset/HTML-CSS.png"},
         {name: "Figma", image: "/skillset/figma_logo.webp"}
     ];

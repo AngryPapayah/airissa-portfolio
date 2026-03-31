@@ -17,7 +17,7 @@ function WebsiteLayout() {
                     <div className="flex items-center justify-between">
                         <Link to="/" onClick={() => setMenuOpen(false)}>
                             <img
-                                src="/full-logo.png"
+                                src="/logo.png"
                                 alt="logo"
                                 className="h-8 sm:h-10 cursor-pointer hover:scale-105 transition"
                             />
@@ -37,7 +37,10 @@ function WebsiteLayout() {
                                 <Button>{language === "EN" ? "My work" : "Mijn werk"}</Button>
                             </Link>
 
-                            <Button>{language === "EN" ? "Contact" : "Contact"}</Button>
+                            <Link to="/contact">
+                                <Button>{language === "EN" ? "Contact" : "Contact"}</Button>
+                            </Link>
+
 
                             <Button onClick={toggleLanguage}>
                                 {language}
