@@ -18,9 +18,10 @@ function MyWork() {
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {projects.map((project) => (
-                    <div
+                    <Link
                         key={project.id}
-                        className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-2"
+                        to={`/mywork/${project.id}`}
+                        className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-xl backdrop-blur-sm transition duration-300 hover:-translate-y-2 block"
                     >
                         <div className="overflow-hidden">
                             <img
@@ -39,13 +40,13 @@ function MyWork() {
                                 {project.description[language]}
                             </p>
 
-                            <Link to={`/mywork/${project.id}`}>
+                            <div>
                                 <Button>
                                     {language === "EN" ? "View more" : "Bekijk meer"}
                                 </Button>
-                            </Link>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>
