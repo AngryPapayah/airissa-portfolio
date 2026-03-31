@@ -28,7 +28,7 @@ function AboutMe() {
                     <h1 className="text-5xl font-bold">
                         {language === "EN" ? "About Me" : "Over mij"}
                     </h1>
-
+                    {/*Changed*/}
                     <p className="text-white/70 leading-relaxed">
                         {language === "EN"
                             ? "I am a Creative Media and Game Technologies (CMGT) student who enjoys combining creativity and technology to build modern and interactive applications. I also graduated as a Media Design student from the Grafisch Lyceum Rotterdam, where I specialized in animation. This background allows me to approach projects with both a creative and technical mindset, enabling me to design and develop engaging digital experiences."
