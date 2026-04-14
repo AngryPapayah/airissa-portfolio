@@ -55,5 +55,27 @@
     ],
     "liveUrl": "",
     "githubUrl": "https://github.com/semvde/Poppy-Front_end"
+  },
+  {
+    "id": 3,
+    "title": "Zombie Shooter Excalibur",
+    "description": {
+      "EN": "A fast-paced zombie shooter where players survive increasingly dangerous waves of enemies.",
+      "NL": "Een snelle zombie shooter waarin spelers moeten overleven tegen steeds gevaarlijkere golven vijanden."
+    },
+    "longDescription": {
+      "EN": "Zombie Shooter Excalibur was a school project where I collaborated with Excalibur to develop a zombie shooter game focused on survival and increasing difficulty. The game challenges players to stay alive while facing waves of zombies that become progressively faster as more enemies are eliminated.\n\nI worked on implementing core gameplay mechanics, including the shooting system and difficulty scaling. The player has a limited ammo capacity of five bullets, which requires careful timing and strategic reloading during intense moments. This adds an extra layer of tension and decision-making to the gameplay.\n\nThe goal of the project was to create a simple but engaging experience where pressure constantly builds, pushing the player to react quickly and manage resources effectively.",
+      "NL": "Zombie Shooter Excalibur was een schoolproject waarbij ik samen met Excalibur werkte aan het ontwikkelen van een zombie shooter game met focus op overleving en oplopende moeilijkheid. De game daagt spelers uit om zo lang mogelijk te overleven terwijl ze worden aangevallen door golven zombies die steeds sneller worden naarmate er meer vijanden worden uitgeschakeld.\n\nIk heb gewerkt aan het implementeren van de core gameplay mechanics, waaronder het schietsysteem en de moeilijkheidsschaal. De speler heeft een beperkte hoeveelheid munitie van vijf kogels, waardoor je goed moet nadenken over wanneer je schiet en wanneer je herlaadt. Dit zorgt voor extra spanning en strategische keuzes tijdens het spelen.\n\nHet doel van dit project was om een eenvoudige maar verslavende ervaring te maken waarbij de druk continu toeneemt en spelers worden uitgedaagd om snel te reageren en hun resources goed te beheren."
+    },
+    "images": [
+      "/excaliber-zombieshooter/start-screen.png",
+      "/excaliber-zombieshooter/game-over.png",
+      "/excaliber-zombieshooter/score.png"
+    ],
+    "technologies": [
+      "Excalibur"
+    ],
+    "liveUrl": "https://angrypapayah.github.io/PRG04-eindopdracht/",
+    "githubUrl": "https://github.com/AngryPapayah/PRG04-eindopdracht"
   }
 ]
