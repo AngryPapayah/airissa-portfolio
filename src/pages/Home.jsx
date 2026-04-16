@@ -5,13 +5,23 @@ function Home() {
     const {language} = useOutletContext();
 
     const skills = [
-        {name: "React", image: "/skillset/react.webp"},
+        {name: "PhpStorm", image: "/skillset/phpstorm.png"},
+        {name: "Visual Studio", image: "/skillset/VS.png"},
         {name: "JavaScript", image: "/skillset/JS.png"},
+        {name: "React", image: "/skillset/react.webp"},
+        {name: "React Native", image: "/skillset/react.webp"},
+        // {name: "Express", image: "/skillset/JS.png"},
         {name: "HTML & CSS", image: "/skillset/HTML-CSS.png"},
         {name: "Figma", image: "/skillset/figma_logo.webp"},
-        {name: "PhpStorm", image: "/skillset/phpstorm.png"},
-        {name: "Visual Studio", image: "/skillset/VS.png"}
+        {name: "Laravel", image: "/skillset/Laravel-Logo.png"},
+        {name: "Photoshop", image: "/skillset/Photoshop.png"},
+        {name: "Illustrator", image: "/skillset/Illustrator.png"},
+        {name: "Premiere Pro", image: "/skillset/Premierepro.png"},
+        {name: "After Effects", image: "/skillset/AfterEffects.png"}
     ];
+
+    // Duplicate skills for seamless infinite loop
+    const loopedSkills = [...skills, ...skills, ...skills];
 
     return (
         <>
@@ -53,7 +63,6 @@ function Home() {
                         <Link to="/contact">
                             <Button>{language === "EN" ? "Contact" : "Contact"}</Button>
                         </Link>
-                        
                     </div>
                 </div>
 
@@ -68,6 +77,7 @@ function Home() {
                 </div>
             </section>
 
+            {/* Skills Carousel */}
             <section className="max-w-6xl mx-auto px-6 py-12 md:py-16 space-y-10">
                 <div className="text-center md:text-left">
                     <p className="text-accent text-lg">
@@ -78,25 +88,46 @@ function Home() {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 md:gap-6">
-                    {skills.map((skill) => (
-                        <div
-                            key={skill.name}
-                            className="bg-white/5 border border-white/10 rounded-2xl p-4 md:p-6 text-center hover:scale-105 transition backdrop-blur-sm"
-                        >
-                            <img
-                                src={skill.image}
-                                alt={skill.name}
-                                className="w-10 h-10 md:w-12 md:h-12 object-contain mx-auto mb-3"
-                            />
+                {/* Carousel wrapper with fade edges */}
+                <div className="relative overflow-hidden">
+                    {/* Left fade */}
+                    <div
+                        className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[var(--color-bg,#0f0f0f)] to-transparent z-10 pointer-events-none"></div>
+                    {/* Right fade */}
+                    <div
+                        className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[var(--color-bg,#0f0f0f)] to-transparent z-10 pointer-events-none"></div>
 
-                            <p className="text-sm font-medium">
-                                {skill.name}
-                            </p>
-                        </div>
-                    ))}
+                    <div className="flex gap-6 animate-scroll w-max">
+                        {loopedSkills.map((skill, index) => (
+                            <div
+                                key={`${skill.name}-${index}`}
+                                className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center hover:scale-105 transition backdrop-blur-sm flex-shrink-0 w-32"
+                            >
+                                <img
+                                    src={skill.image}
+                                    alt={skill.name}
+                                    className="w-12 h-12 object-contain mx-auto mb-3"
+                                />
+                                <p className="text-sm font-medium">{skill.name}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
+
+            {/* Keyframe animation via style tag */}
+            <style>{`
+                @keyframes scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(calc(-100% / 3)); }
+                }
+                .animate-scroll {
+                    animation: scroll 18s linear infinite;
+                }
+                .animate-scroll:hover {
+                    animation-play-state: paused;
+                }
+            `}</style>
         </>
     );
 }

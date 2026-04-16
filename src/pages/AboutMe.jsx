@@ -11,7 +11,8 @@ function AboutMe() {
         {name: "React Native", image: "/skillset/react.webp"},
         // {name: "Express", image: "/skillset/JS.png"},
         {name: "HTML & CSS", image: "/skillset/HTML-CSS.png"},
-        {name: "Figma", image: "/skillset/figma_logo.webp"}
+        {name: "Figma", image: "/skillset/figma_logo.webp"},
+        {name: "Laravel", image: "/skillset/Laravel-Logo.png"},
     ];
 
     const adobeSkills = [
