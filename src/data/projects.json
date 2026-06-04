@@ -77,5 +77,31 @@
     ],
     "liveUrl": "https://angrypapayah.github.io/PRG04-eindopdracht/",
     "githubUrl": "https://github.com/AngryPapayah/PRG04-eindopdracht"
+  },
+  {
+    "id": 4,
+    "title": "BoozeBuddies",
+    "description": {
+      "EN": "Don't know any drinking games? Check Boozebuddies!",
+      "NL": "Ken je geen drankenspellen? Check Boozebuddies!"
+    },
+    "longDescription": {
+      "EN": "BoozeBuddies is a web app designed to help people discover fun drinking games. The platform allows users to browse, filter, and add drinking games, making it easy to find the perfect game for any occasion. This project was my first time working with a framework, using Laravel to build the application. Getting familiar with Laravel's structure, routing, and Blade templating was a big learning curve, but it gave me a solid foundation in backend web development. The goal of BoozeBuddies was to create a simple and fun platform where people never run out of drinking game ideas, while also giving me hands-on experience with framework-based development for the first time.",
+      "NL": "BoozeBuddies is een webapplicatie waarmee je leuke drankenspellen kan ontdekken. Het platform stelt gebruikers in staat om drankenspellen te bekijken, te filteren en toe te voegen, zodat je altijd een passend spel vindt voor elk moment.Dit project was de eerste keer dat ik met een framework werkte, waarbij ik Laravel gebruikte om de applicatie te bouwen. Vertrouwd raken met de structuur van Laravel, routing en Blade templating was een grote leercurve, maar het gaf me een sterke basis in backend webontwikkeling. Het doel van BoozeBuddies was om een eenvoudig en leuk platform te maken waar mensen nooit zonder drankenspellen zitten, terwijl ik tegelijkertijd voor het eerst hands-on ervaring opdeed met framework-gebaseerde ontwikkeling."
+    },
+    "images": [
+      "/boozebuddies/homepage.png",
+      "/boozebuddies/guest-page.png",
+      "/boozebuddies/game-card.png",
+      "/boozebuddies/filter.png",
+      "/boozebuddies/added-game",
+      "/boozebuddies/add-game"
+    ],
+    "technologies": [
+      "Laravel",
+      "Blade"
+    ],
+    "liveUrl": "",
+    "githubUrl": "https://github.com/AngryPapayah/drinking-games"
   }
 ]
