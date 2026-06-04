@@ -94,8 +94,8 @@
       "/boozebuddies/guest-page.png",
       "/boozebuddies/game-card.png",
       "/boozebuddies/filter.png",
-      "/boozebuddies/added-game",
-      "/boozebuddies/add-game"
+      "/boozebuddies/added-game.png",
+      "/boozebuddies/add-game.png"
     ],
     "technologies": [
       "Laravel",
